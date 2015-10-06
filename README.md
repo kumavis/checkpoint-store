@@ -49,3 +49,11 @@ keeps the state and removes the previous checkpoint. throws an error if there ar
 ##### store.isCheckpointed()
 
 returns true if the store has remaining checkpoints.
+
+##### store.copy()
+
+returns a new CheckpointStore with matching state and checkpoints.
+
+##### store.toJSON()
+
+returns an object (not a string!) of the current state.

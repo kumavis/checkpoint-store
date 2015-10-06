@@ -58,3 +58,20 @@ CheckpointStore.prototype.commit = function() {
     throw new Error('Checkpoint store committed without a checkpoint.')
   }
 }
+
+CheckpointStore.prototype.copy = function() {
+  var copy = new CheckpointStore()
+  copy._tree = this._tree
+  copy.checkpoints = this.checkpoints.slice()
+  return copy
+}
+
+CheckpointStore.prototype.toJSON = function() {
+  var self = this
+  var data = {}
+  self._tree.keys.forEach(function(key){
+    var value = self.get(key)
+    data[key] = value
+  })
+  return data
+}
