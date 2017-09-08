@@ -1,5 +1,7 @@
 # Checkpoint-Store
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/kumavis/checkpoint-store.svg)](https://greenkeeper.io/)
+
 In-memory key-value store with history!
 Keys are strings, values are any type.
 
